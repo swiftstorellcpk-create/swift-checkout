@@ -11,17 +11,3 @@
     "cors": "*"
   }
 }
-```
-
-The `"*"` means "install whatever version is available" — removes any version mismatch issues.
-
-**Also check these two things in GitHub:**
-
-1. Is the file named exactly `swift-checkout-server.js`? (no capital letters, no spaces)
-2. Are both files in the **root** of the repo — not inside a folder?
-
-It should look like this in your GitHub repo:
-```
-swift-checkout/
-├── swift-checkout-server.js
-└── package.json
