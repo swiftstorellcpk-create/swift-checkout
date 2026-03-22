@@ -1,17 +1,27 @@
 {
   "name": "swift-checkout",
   "version": "1.0.0",
-  "main": "swift-checkout-server.js",
   "scripts": {
     "start": "node swift-checkout-server.js"
   },
   "dependencies": {
-    "express": "4.18.2",
-    "multer": "1.4.5-lts.1",
-    "nodemailer": "6.9.7",
-    "cors": "2.8.5"
-  },
-  "engines": {
-    "node": "18.x"
+    "express": "*",
+    "multer": "*",
+    "nodemailer": "*",
+    "cors": "*"
   }
 }
+```
+
+The `"*"` means "install whatever version is available" — removes any version mismatch issues.
+
+**Also check these two things in GitHub:**
+
+1. Is the file named exactly `swift-checkout-server.js`? (no capital letters, no spaces)
+2. Are both files in the **root** of the repo — not inside a folder?
+
+It should look like this in your GitHub repo:
+```
+swift-checkout/
+├── swift-checkout-server.js
+└── package.json
