@@ -23,7 +23,36 @@
  * ║  5. Copy your server URL into Shopify section settings         ║
  * ╚══════════════════════════════════════════════════════════════════╝
  */
+const express  = require('express');
+const multer   = require('multer');
+const nodemailer = require('nodemailer');
+const cors     = require('cors');
+const path     = require('path');
+const fs       = require('fs');
 
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+/* ═══════════════════════════════════════════
+   ⚙  ENV VARIABLES
+═══════════════════════════════════════════ */
+
+const CONFIG = {
+  SHOPIFY_STORE:    process.env.SHOPIFY_STORE,
+  SHOPIFY_TOKEN:    process.env.SHOPIFY_TOKEN,
+  GMAIL_USER:       process.env.GMAIL_USER,
+  GMAIL_APP_PASS:   process.env.GMAIL_APP_PASS,
+  STORE_NAME:       'Swift Store LLC',
+  SADAPAY_NUM:      '0336-2547633',
+  PORT:             process.env.PORT || 3000,
+};
+
+// ... Rest of your logic (Multer, Nodemailer, Shopify Helpers) remains the same as your original file ...
+
+app.listen(CONFIG.PORT, () => {
+  console.log(`Server running on port ${CONFIG.PORT}`);
+});
 const express  = require('express');
 const multer   = require('multer');
 const nodemailer = require('nodemailer');
